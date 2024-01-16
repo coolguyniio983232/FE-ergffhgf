@@ -1,0 +1,277 @@
+-- imie his Gui to Lua
+-- Version: 1
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+local TextButton_4 = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0802919716, 0, 0.152380958, 0)
+Frame.Size = UDim2.new(0, 406, 0, 218)
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0, 0, 0.00458715577, 0)
+ImageLabel.Size = UDim2.new(0, 406, 0, 217)
+ImageLabel.Image = "rbxassetid://13594792845"
+
+TextLabel.Parent = ImageLabel
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 876.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.253694594, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "ITSNOTSKELETON GUI PRISON LIFE"
+TextLabel.TextColor3 = Color3.fromRGB(85, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextButton.Parent = TextLabel
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderColor3 = Color3.fromRGB(85, 255, 255)
+TextButton.BorderSizePixel = 4
+TextButton.Position = UDim2.new(-0.408961207, 0, 1.26711917, 0)
+TextButton.Size = UDim2.new(0, 244, 0, 37)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Spin All [100]"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+TextButton_2.Parent = TextLabel
+TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderColor3 = Color3.fromRGB(85, 255, 255)
+TextButton_2.BorderSizePixel = 4
+TextButton_2.Position = UDim2.new(0.856000066, 0, 1.26700008, 0)
+TextButton_2.Size = UDim2.new(0, 120, 0, 36)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "50 walkspeed all"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+TextButton_3.Parent = TextLabel
+TextButton_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.BorderColor3 = Color3.fromRGB(85, 255, 255)
+TextButton_3.BorderSizePixel = 4
+TextButton_3.Position = UDim2.new(-0.283961177, 0, 2.22711921, 0)
+TextButton_3.Size = UDim2.new(0, 244, 0, 37)
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = "Energize GUI"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14.000
+TextButton_3.TextWrapped = true
+
+TextButton_4.Parent = TextLabel
+TextButton_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.BorderColor3 = Color3.fromRGB(85, 255, 255)
+TextButton_4.BorderSizePixel = 4
+TextButton_4.Position = UDim2.new(0.231038824, 0, 3.14711905, 0)
+TextButton_4.Size = UDim2.new(0, 244, 0, 37)
+TextButton_4.Font = Enum.Font.SourceSans
+TextButton_4.Text = "Infinite Yield Admin"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.TextScaled = true
+TextButton_4.TextSize = 14.000
+TextButton_4.TextWrapped = true
+
+-- Scripts:
+
+local function OCMPQ_fake_script() -- TextLabel.Rainbow 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(OCMPQ_fake_script)()
+local function YJVBCP_fake_script() -- TextButton.Script 
+	local script = Instance.new('Script', TextButton)
+
+	function click()
+		for i,v in pairs(game.Players:GetChildren()) do
+			local plr = v
+			number = 100
+			local head = v.Character.Head
+			if head then
+				local spin1 = head:FindFirstChild("Spin1")
+				local spin2 = head:FindFirstChild("Spin2")
+				if not spin1 then
+					spin1 = Instance.new("BodyAngularVelocity")
+					spin1.MaxTorque = Vector3.new(300000, 300000, 300000)
+					spin1.P = 300
+					spin1.Name = "Spin1"
+					spin1.Parent = head
+					spin2 = Instance.new("BodyGyro")
+					spin2.MaxTorque = Vector3.new(400000, 0, 400000)
+					spin2.D = 500
+					spin2.P = 300
+					spin2.Name = "Spin2"
+					spin2.Parent = head
+				end
+				spin1.AngularVelocity = Vector3.new(0,number,0)
+			end
+		end
+	end
+	
+	script.Parent.MouseButton1Down:connect(click)
+end
+coroutine.wrap(YJVBCP_fake_script)()
+local function ZPZT_fake_script() -- TextButton.Rainbow 
+	local script = Instance.new('LocalScript', TextButton)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(ZPZT_fake_script)()
+local function NRNU_fake_script() -- TextButton_2.Script 
+	local script = Instance.new('Script', TextButton_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		for i,p in pairs(game:GetService("Players"):GetChildren()) do
+			if p.ClassName == "Player" then
+				p.Character:FindFirstChildOfClass("Humanoid").WalkSpeed = 50
+			end
+	
+		end
+	end)
+end
+coroutine.wrap(NRNU_fake_script)()
+local function BNYB_fake_script() -- TextButton_2.Rainbow 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(BNYB_fake_script)()
+local function HKCTN_fake_script() -- TextButton_3.Script 
+	local script = Instance.new('Script', TextButton_3)
+
+	ENERGIZE.MouseButton1Down:connect(function() loadstring(game:HttpGet("https://pastebin.com/raw/Rx4Qqicd"))()
+		
+	end)
+end
+coroutine.wrap(HKCTN_fake_script)()
+local function MMBCGFU_fake_script() -- TextButton_3.Rainbow 
+	local script = Instance.new('LocalScript', TextButton_3)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(MMBCGFU_fake_script)()
+local function PYNAY_fake_script() -- TextButton_4.Script 
+	local script = Instance.new('Script', TextButton_4)
+
+	script.MouseButton1Down:connect(function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+		
+	end)
+end
+coroutine.wrap(PYNAY_fake_script)()
+local function QZLCE_fake_script() -- TextButton_4.Rainbow 
+	local script = Instance.new('LocalScript', TextButton_4)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(QZLCE_fake_script)()
+local function WPJEM_fake_script() -- Frame.Drag Gui Script 
+	local script = Instance.new('LocalScript', Frame)
+
+	function dragify(Main)
+	dragToggle = nil
+	dragSpeed = 0.95 -- You can edit this.
+	dragInput = nil
+	dragStart = nil
+	dragPos = nil
+	
+	function updateInput(input)
+	Delta = input.Position - dragStart
+	Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	game:GetService("TweenService"):Create(Main, TweenInfo.new(.25), {Position = Position}):Play()
+	end
+	
+	Main.InputBegan:Connect(function(input)
+	if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
+	dragToggle = true
+	dragStart = input.Position
+	startPos = Main.Position
+	input.Changed:Connect(function()
+	if (input.UserInputState == Enum.UserInputState.End) then
+	dragToggle = false
+	end
+	end)
+	end
+	end)
+	
+	Main.InputChanged:Connect(function(input)
+	if (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+	dragInput = input
+	end
+	end)
+	
+	game:GetService("UserInputService").InputChanged:Connect(function(input)
+	if (input == dragInput and dragToggle) then
+	updateInput(input)
+	end
+	end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(WPJEM_fake_script)()
